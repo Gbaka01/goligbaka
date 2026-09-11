@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de contact | Dessins de Goré</title>
+  <style>
+  :root {
+    --accent: #dc3545;
+    --text: #222;
+    --border: #ddd;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+  }
+  .contact-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+  }
+  .contact-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px;
+    width: 100%;
+    max-width: 480px;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin: 0 0 24px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 10px;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 16px 0 6px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  button {
+    margin-top: 22px;
+    width: 100%;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  button:hover { opacity: 0.9; }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .msg {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: none;
+  }
+  .msg.success { background: #e6f6ea; color: #1e7e34; display: block; }
+  .msg.error { background: #fdecea; color: #c0392b; display: block; }
+  .error-text {
+    color: #c0392b;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none;
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Goli Gore Gbaka",
+ "jobTitle": "Artist",
+ "url": "https://goligbaka.fr",
+ "sameAs": [
+   "https://dessinsgore.fr",
+   "https://reseaugbaka.fr"
+ ]
+}
+</script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="style.css">
+ 
+  <meta name="author" content="GOLI Gore Gbaka">
+  <meta name="keywords" content="Dessins de Goré, GOLI Gore Gbaka, Église Notre-Dame de France, Juvisy-sur-Orge, art, dessin, galerie, artiste">
+  <meta name="robots" content="index, follow">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="canonical" href="https://goligbaka.fr/formulaire.html">
+ 
+  <meta property="og:url" content="https://goligbaka.fr/formulaire.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+ 
+  <meta name="twitter:card" content="summary_large_image">
+ 
+  <meta name="google-adsense-account" content="ca-pub-9240019120561886">
+  <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
+ 
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9240019120561886"
+    crossorigin="anonymous"
+  ></script>
+ 
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l !== 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5L47N78Z');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+ 
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-5L47N78Z"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+ 
+ 
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand col-3" href="https://goligbaka.fr/">Dessins de Goré</a>
+ 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item me-5">
+              <a class="nav-link" href="https://goligbaka.fr/">Accueil</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="a-propos.html">À propos</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="produits.html">Produits</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="galerie.html">Galerie</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
+            </li>
+             <li class="nav-item me-5">
+              <a class="nav-link active" aria-current="page" href="formulaire.html">Formulaire de contact</a>
+            </li>
+          </ul>
+ 
+          <form class="d-flex ms-lg-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
+            <button class="btn btn-outline-success" type="submit">Rechercher</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
+  <main>
+    <div class="contact-wrapper">
+      <div class="contact-card">
+        <h1>Me contacter</h1>
+        <form id="contactForm" novalidate>
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required>
+          <span class="error-text" id="nameError">Merci d'indiquer votre nom.</span>
+ 
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-text" id="emailError">Merci d'indiquer un email valide.</span>
+ 
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <span class="error-text" id="messageError">Merci d'écrire un message.</span>
+ 
+          <!-- Piège à robots (anti-spam), doit rester vide et invisible -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+ 
+          <button type="submit" id="submitBtn">Envoyer</button>
+          <div class="msg" id="formMsg"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+ 
+<script>
+// Remplacez cette URL par la vôtre, obtenue gratuitement sur https://formspree.io
+// (créez un compte, un formulaire, et copiez l'URL "endpoint" fournie)
+const FORM_ENDPOINT = "https://formspree.io/f/xljezoko";
+ 
+const form = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const formMsg = document.getElementById('formMsg');
+ 
+function showFieldError(fieldId, show) {
+  document.getElementById(fieldId + 'Error').style.display = show ? 'block' : 'none';
+}
+ 
+function validate() {
+  let valid = true;
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ 
+  showFieldError('name', name === '');
+  if (name === '') valid = false;
+ 
+  showFieldError('email', !emailPattern.test(email));
+  if (!emailPattern.test(email)) valid = false;
+ 
+  showFieldError('message', message === '');
+  if (message === '') valid = false;
+ 
+  return valid;
+}
+ 
+form.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  formMsg.className = 'msg';
+  formMsg.textContent = '';
+ 
+  if (!validate()) return;
+ 
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Envoi en cours...';
+ 
+  try {
+    const response = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+ 
+    if (response.ok) {
+      formMsg.className = 'msg success';
+      formMsg.textContent = 'Merci, votre message a bien été envoyé !';
+      form.reset();
+    } else {
+      throw new Error('Erreur serveur');
+    }
+  } catch (err) {
+    formMsg.className = 'msg error';
+    formMsg.textContent = "Une erreur est survenue. Merci de réessayer, ou de m'écrire directement par email.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Envoyer';
+  }
+});
+</script>
+  <footer class="bg-dark text-light p-3 mt-4">
+    <div class="d-flex flex-column flex-md-row fs-5 justify-content-between align-items-center gap-3">
+      <p class="mb-0 text-center">GOLI Gore Gbaka - © Copyright 2026</p>
+ 
+      <div class="d-flex align-items-center gap-3">
+ 
+ 
+        <a
+          href="https://x.com/GoliGore33933"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+          class="text-light"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+          </svg>
+        </a>
+ 
+        <a
+          href="https://fr.pinterest.com/goregoli/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pinterest"
+          class="text-light"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+ 
+    <p class="jeu d-flex fs-5 justify-content-center mt-3 mb-0">X.XX</p>
+  </footer>
+ 
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js" defer></script>
+  </body>
+</html>
+ 
