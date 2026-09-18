@@ -52,7 +52,7 @@ let blogs = [
         
        {
         nom:"Le corps d'une femme",
-        description:"Une femme doit  obligatoirement se marier. Selon la philosophe Simone Veil, le corps de le femme est avant tout culturel et social.  Merci"
+        description:"Une femme doit  obligatoirement se marier. Selon la philosophe Simone Veil, le corps de la femme est avant tout culturel et social.  Merci"
        },  
        {
         nom:"Le Verbe",
@@ -125,7 +125,7 @@ let blogs = [
        },
        {
         nom:" La guerre juste",
-        description:"C'est inadmissible. Merci."
+        description:"C'est inadmissible. Soum Bill: on veut la paix mais une paix durable c'est encore mieux, nos piliers sont pourris mais on construit dessus quand même. Merci."
        },
        {
         nom:"Alassane Dramane Ouattara",
@@ -142,7 +142,11 @@ let blogs = [
        {
         nom:"Le nazisme",
         description: "Le national-socialisme (en allemand Nationalsozialismus), couramment abrévié nazisme (en allemand Nazismus), est l'idéologie politique du Parti national-socialiste des travailleurs allemands (NSDAP), parti politique d'extrême droite, fondé en Allemagne en 1920 et dirigé par Adolf Hitler. Cette idéologie théorise une hiérarchie au sein de l'espèce humaine divisée en « races », au sommet desquelles se trouve la « race aryenne », supérieure, tandis que les races les plus détestées par les nazis, les Juifs, les Slaves et les Tziganes, forment la classe des « sous-hommes », les Untermenschen. Le nazisme est le seul type de fascisme incorporant à la fois racisme biologique et antisémitisme[7]. Par extension, le terme nazisme désigne le régime politique inspiré de cette idéologie, dictature totalitaire et expansionniste dirigée par Adolf Hitler de 1933 à 1945 et connue sous les noms de Troisième Reich ou d'Allemagne nazie. En tant que sujet de science politique, les définitions du nazisme varient selon les historiens[8]. En particulier, reste ouverte la question de savoir si le nazisme ne fut que l'une des formes du fascisme ou doit être considéré, parce qu'ayant fait du racisme une doctrine d'État, comme un phénomène historique et idéologique unique. En effet, l'antisémitisme officiel du régime nazi, l'élimination des personnes juives, handicapées et la persécution, entre autres, des opposants politiques, des homosexuels et des Roms, se concrétisent dès 1933, par la mise en place d'une législation raciale et fortement discriminatoire, par une politique de spoliation des Juifs, et par l'internement des opposants et des « indésirables » dans les premiers camps de concentration en Allemagne. Cette politique ne fait que s'amplifier du début de la Seconde Guerre mondiale, lorsque la Shoah par balles est déclenchée et que sont créés les centres d'extermination nazis, jusqu'à la défaite militaire du Troisième Reich en 1945. Ainsi, plus de six millions de personnes, dont une majorité de Juifs, sont tués dans les camps de concentration et les centres d'extermination, ou lors des innombrables massacres commis par les troupes nazies et leurs supplétifs des pays occupés[9]."
-       }       
+       },
+       {
+        nom:"Les élections présidentielles de 2027",
+        description:"Le programme de Marine Le Pen est la baisse de la TVA. C'est bon pour le pouvoir d'achat des classes modestes, une croissance à court terme. Mais, celà augmenterait le deficit prévu à 5 %. Edouard Philippe augmenterait l'âge de départ à la retraite. Mais, on meurt au travail. GLUSCKMAN taxerait les plus riches. Mais, ils ont mérité ce qu'ils ont. Leurs parents ont travaillé beaucoup. Merci."
+       }        
         
 ]
 let index = window.location.search.slice(1)
