@@ -352,6 +352,17 @@
 
     <p class="jeu d-flex fs-5 justify-content-center mt-3 mb-0">X.XX</p>
   </footer>
+    <script type="text/plain" data-consent="analytics"
+    src="https://www.googletagmanager.com/gtag/js?id=GTM-5L47N78Z"></script>
+
+<script type="text/plain" data-consent="analytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'GTM-5L47N78Z', {
+    cookie_expires: 34128000   // 13 mois en secondes (optionnel)
+  });
+</script>
 <section class="consent-banner" id="consent-banner" role="region" aria-labelledby="consent-title" hidden>
   <div class="consent-inner">
     <div class="consent-text">
@@ -362,6 +373,7 @@
       </p>
     </div>
     <div class="consent-actions">
+          <button class="btn" type="button" data-action="reject">Tout refuser</button>
       <button class="btn btn-outline" type="button" data-action="customize">Personnaliser</button>
       <button class="btn" type="button" data-action="accept">Tout accepter</button>
     </div>
