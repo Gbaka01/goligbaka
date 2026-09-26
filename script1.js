@@ -146,6 +146,10 @@ let blogs = [
        {
         nom:"Les élections présidentielles de 2027",
         description:"Le programme de Marine Le Pen est la baisse de la TVA. C'est bon pour le pouvoir d'achat des classes modestes, une croissance à court terme. Mais, celà augmenterait le deficit prévu à 5 %. Edouard Philippe augmenterait l'âge de départ à la retraite. Mais, on meurt au travail. GLUSCKMAN taxerait les plus riches. Mais, ils ont mérité ce qu'ils ont. Leurs parents ont travaillé beaucoup. Merci."
+       },
+       {
+        nom:"l'écrivain haitien",
+        description:"Que les gens sont attardés, bêtes, idiots. Comment écrire un livre avec l'IA. Bâtards. Merde. Cafard. Merci"
        }   
 ]
 function createCafe(blog){ 
