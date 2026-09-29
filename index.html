@@ -33,7 +33,6 @@
   <meta name="twitter:image" content="https://goligbaka.fr/L%27Arrestation%20du%20Christ.jpg">
   <meta name="twitter:image:alt" content="L'Arrestation du Christ, dessin de GOLI Gore Gbaka">
  
- 
   <!-- Données structurées -->
   <script type="application/ld+json">
   {
@@ -70,6 +69,9 @@
     .yt-consent .yt-play { width: 64px; height: 44px; border-radius: 12px; background: #dc3545; display: grid; place-items: center; font-size: 1.4rem; }
     .yt-consent small { opacity: .75; }
     .yt-consent iframe { width: 100%; height: 100%; border: 0; display: block; }
+ 
+    /* Carrousels : images plus larges sur mobile (w-50 les rendait minuscules) */
+    .carousel-item img { width: 100%; max-width: 600px; height: auto; }
   </style>
  
   <!-- Google Tag Manager : chargé en bas de page, uniquement après accord « Mesure d'audience » -->
@@ -119,20 +121,18 @@
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item me-lg-4">
-              <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
-            </li>
-            <li class="nav-item me-lg-4">
-              <a class="nav-link" href="formulaire.html">Contact</a>
-            </li>
-            <li class="nav-item me-lg-4">
               <a class="nav-link" href="mes-projets.html">Mes projets</a>
             </li>
             <li class="nav-item me-lg-4">
               <a class="nav-link" href="selection.html">Sélection</a>
             </li>
+            <li class="nav-item me-lg-4">
+              <a class="nav-link" href="formulaire.html">Contact</a>
+            </li>
+            <!-- « Mentions légales » retiré du menu : il reste dans le pied de page, où on l'attend -->
           </ul>
  
-          <!-- Recherche : le formulaire ne faisait rien, il interroge maintenant Google sur ce seul site -->
+          <!-- Recherche : interroge Google sur ce seul site -->
           <form class="d-flex" role="search" action="https://www.google.com/search" method="get" target="_blank">
             <input type="hidden" name="as_sitesearch" value="goligbaka.fr">
             <input class="form-control me-2" type="search" name="q" placeholder="Rechercher" aria-label="Rechercher sur le site" required>
@@ -150,7 +150,6 @@
       <p class="h3 mb-4">Artiste contemporain</p>
       <p class="lead mb-4">GOLI Gore Gbaka est un artiste contemporain dont le travail explore le dessin comme langage du symbolisme et de la spiritualité. Ses œuvres, souvent construites autour de figures et de scènes chargées de sens, invitent à une lecture qui dépasse le simple portrait : chaque trait cherche à révéler une dimension intérieure, entre mémoire, croyance et émotion.</p>
       <p class="lead mb-4">Puisant dans un répertoire où se croisent références religieuses et portraits intimes — de l'arrestation du Christ aux visages de proches —, GOLI Gore Gbaka tisse un pont entre le sacré et le quotidien. Sa démarche artistique donne à voir un univers singulier, où le dessin devient un espace de recueillement autant que de création.</p>
-      <!-- Fil d'Ariane supprimé : inutile sur la page d'accueil -->
     </section>
  
     <!--
@@ -177,6 +176,8 @@
         <div class="yt-consent" data-yt-id="VMLwgcWxWeY" data-title="Vidéo 9"></div>
         <div class="yt-consent" data-yt-id="Q7JYvWpCMJI" data-title="Vidéo 10"></div>
         <div class="yt-consent" data-yt-id="FCUk7rIBBAE" data-title="Vidéo 11"></div>
+        <!-- Corrigé : la 12e vidéo était un iframe YouTube direct, chargé sans consentement -->
+        <div class="yt-consent" data-yt-id="e2HXUabfxmE" data-title="Vidéo 12"></div>
       </div>
     </section>
  
@@ -185,16 +186,17 @@
         <a href="produits.html" class="text-decoration-none text-light">Produits</a>
       </h2>
  
+      <!-- Les espaces des noms de fichiers sont encodés en %20 (URL valides) -->
       <div id="carouselProduits" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
           <div class="carousel-item active">
-            <img src="L'incrédubilité de Thomas.jpg" class="d-block mx-auto w-50" alt="L'Incrédulité de Thomas, dessin de GOLI Gore Gbaka">
+            <img src="L'incrédubilité%20de%20Thomas.jpg" class="d-block mx-auto" alt="L'Incrédulité de Thomas, dessin de GOLI Gore Gbaka">
           </div>
           <div class="carousel-item">
-            <img src="L'Odalisque blonde.jpg" class="d-block mx-auto w-50" alt="L'Odalisque blonde, dessin de GOLI Gore Gbaka" loading="lazy">
+            <img src="L'Odalisque%20blonde.jpg" class="d-block mx-auto" alt="L'Odalisque blonde, dessin de GOLI Gore Gbaka" loading="lazy">
           </div>
           <div class="carousel-item">
-            <img src="L'Arrestation du Christ.jpg" class="d-block mx-auto w-50" alt="L'Arrestation du Christ, dessin de GOLI Gore Gbaka" loading="lazy">
+            <img src="L'Arrestation%20du%20Christ.jpg" class="d-block mx-auto" alt="L'Arrestation du Christ, dessin de GOLI Gore Gbaka" loading="lazy">
           </div>
         </div>
  
@@ -224,33 +226,33 @@
  
         <div class="carousel-inner text-center">
           <div class="carousel-item active">
-            <img src="le nouveau arrivé Bessou David.jpg" class="d-block mx-auto w-50" alt="Le nouvel arrivé, David">
+            <img src="le%20nouveau%20arrivé%20Bessou%20David.jpg" class="d-block mx-auto" alt="Le nouvel arrivé, David">
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="h5">Famille 1</h3>
+              <h3 class="h5">Le nouvel arrivé</h3>
               <a href="galerie.html" class="text-white">Voir la galerie</a>
             </div>
           </div>
  
           <div class="carousel-item">
-            <img src="Moi et Marie-Anna.JPG" class="d-block mx-auto w-50" alt="Moi et Marie-Anna" loading="lazy">
+            <img src="Moi%20et%20Marie-Anna.JPG" class="d-block mx-auto" alt="Moi et Marie-Anna" loading="lazy">
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="h5">Famille 2</h3>
+              <h3 class="h5">Moi et Marie-Anna</h3>
               <a href="galerie.html" class="text-white">Voir la galerie</a>
             </div>
           </div>
  
           <div class="carousel-item">
-            <img src="Claire Eunice.JPG" class="d-block mx-auto w-50" alt="Claire Eunice" loading="lazy">
+            <img src="Claire%20Eunice.JPG" class="d-block mx-auto" alt="Claire Eunice" loading="lazy">
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="h5">Famille 3</h3>
+              <h3 class="h5">Claire Eunice</h3>
               <a href="galerie.html" class="text-white">Voir la galerie</a>
             </div>
           </div>
  
           <div class="carousel-item">
-            <img src="David et sa maman.JPG" class="d-block mx-auto w-50" alt="David et sa maman" loading="lazy">
+            <img src="David%20et%20sa%20maman.JPG" class="d-block mx-auto" alt="David et sa maman" loading="lazy">
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="h5">Famille 4</h3>
+              <h3 class="h5">David et sa maman</h3>
               <a href="galerie.html" class="text-white">Voir la galerie</a>
             </div>
           </div>
@@ -279,7 +281,7 @@
  
   <footer class="bg-dark text-light p-3 mt-4">
     <div class="d-flex flex-column flex-md-row fs-5 justify-content-between align-items-center gap-3">
-      <p class="mb-0 text-center">GOLI Gore Gbaka - © Copyright 2026</p>
+      <p class="mb-0 text-center">© 2026 GOLI Gore Gbaka</p>
  
       <div class="d-flex align-items-center gap-3">
         <a
