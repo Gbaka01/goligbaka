@@ -1,22 +1,73 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produits | Dessins de Goré</title>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Person",
- "name": "Goli Gore Gbaka",
- "jobTitle": "Artist",
- "url": "https://goligbaka.fr",
- "sameAs": [
-   "https://dessinsgore.fr",
-   "https://reseaugbaka.fr"
- ]
-}
-</script>
+ 
+  <title>Produits | Dessins de Goré, œuvres de GOLI Gore Gbaka</title>
+  <meta
+    name="description"
+    content="Œuvres originales de GOLI Gore Gbaka : dessins inspirés des grands maîtres, scènes bibliques et mythologiques. Découvrez chaque œuvre et son prix."
+  >
+  <meta name="author" content="GOLI Gore Gbaka">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#dc3545">
+  <link rel="canonical" href="https://goligbaka.fr/produits.html">
+ 
+ 
+  <!-- Open Graph : image de partage = une œuvre (et non une photo de famille) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dessins de Goré">
+  <meta property="og:title" content="Produits | Dessins de Goré">
+  <meta property="og:description" content="Œuvres originales de GOLI Gore Gbaka : dessins inspirés des grands maîtres, scènes bibliques et mythologiques.">
+  <meta property="og:url" content="https://goligbaka.fr/produits.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://goligbaka.fr/Moi%20et%20Marie-Anna.JPG">
+
+ 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Produits | Dessins de Goré">
+  <meta name="twitter:description" content="Œuvres originales de GOLI Gore Gbaka : dessins inspirés des grands maîtres, scènes bibliques et mythologiques.">
+<meta name="twitter:image" content="https://goligbaka.fr/Moi%20et%20Marie-Anna.JPG">
+
+ 
+  <!-- Données structurées : page catalogue + fil d'Ariane (même identité que sur l'accueil) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Produits | Dessins de Goré",
+        "url": "https://goligbaka.fr/produits.html",
+        "inLanguage": "fr",
+        "author": {
+          "@type": "Person",
+          "name": "GOLI Gore Gbaka",
+          "alternateName": "Goré",
+          "jobTitle": "Artiste contemporain",
+          "url": "https://goligbaka.fr/",
+          "sameAs": [
+            "https://dessinsgore.fr/",
+            "https://reseaugbaka.fr/",
+            "https://x.com/GoliGore33933",
+            "https://fr.pinterest.com/goregoli/"
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://goligbaka.fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Produits", "item": "https://goligbaka.fr/produits.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+ 
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,29 +75,15 @@
     crossorigin="anonymous"
   >
   <link rel="stylesheet" href="style.css">
-
-  <meta name="author" content="GOLI Gore Gbaka">
-  <meta name="robots" content="index, follow">
-  <meta
-    name="description"
-    content="Découvrez les œuvres et produits artistiques de GOLI Gore Gbaka."
-  >
-  <link rel="canonical" href="https://goligbaka.fr/produits.html">
-  <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
-
-  <meta property="og:title" content="Produits | Dessins de Goré">
-  <meta property="og:description" content="Découvrez les œuvres et produits artistiques de GOLI Gore Gbaka.">
-  <meta property="og:url" content="https://goligbaka.fr/produits.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:image" content="https://goligbaka.fr/Moi%20et%20Marie-Anna.JPG">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Produits | Dessins de Goré">
-  <meta name="twitter:description" content="Découvrez les œuvres et produits artistiques de GOLI Gore Gbaka.">
-  <meta name="twitter:image" content="https://goligbaka.fr/Moi%20et%20Marie-Anna.JPG">
+ 
+  <style>
+    /* Vignettes de même hauteur ; « contain » pour ne pas rogner les œuvres */
+    .produit-img { aspect-ratio: 4 / 5; object-fit: contain; background: #f4f4f4; }
+  </style>
+ 
+  <!-- Google Tag Manager : chargé en bas de page, uniquement après accord « Mesure d'audience » -->
 </head>
-
+ 
 <body id="top">
   <a
     href="#top"
@@ -54,15 +91,13 @@
     id="scrollTopBtn"
     aria-label="Retour en haut"
     title="Retour en haut"
-  >
-    ↑
-  </a>
-
+  >↑</a>
+ 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" aria-label="Navigation principale">
       <div class="container-fluid">
         <a class="navbar-brand" href="https://goligbaka.fr/">Dessins de Goré</a>
-
+ 
         <button
           class="navbar-toggler"
           type="button"
@@ -74,601 +109,667 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
+ 
+        <!-- Menu identique à celui de l'accueil (même ordre, sans « Mentions légales ») -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
-            <li class="nav-item me-4">
+            <li class="nav-item me-lg-4">
               <a class="nav-link" href="https://goligbaka.fr/">Accueil</a>
             </li>
-            <li class="nav-item me-4">
+            <li class="nav-item me-lg-4">
               <a class="nav-link" href="a-propos.html">À propos</a>
             </li>
-            <li class="nav-item me-4">
+            <li class="nav-item me-lg-4">
               <a class="nav-link active" aria-current="page" href="produits.html">Produits</a>
             </li>
-            <li class="nav-item me-4">
+            <li class="nav-item me-lg-4">
               <a class="nav-link" href="galerie.html">Galerie</a>
             </li>
-            <li class="nav-item me-4">
+            <li class="nav-item me-lg-4">
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
-            <li class="nav-item me-4">
-              <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
-            </li>
-                    <li class="nav-item me-5">
-              <a class="nav-link" href="formulaire.html">Contact</a>
-            </li>
-                                            <li class="nav-item me-5">
+            <li class="nav-item me-lg-4">
               <a class="nav-link" href="mes-projets.html">Mes projets</a>
             </li>
-                                                           <li class="nav-item me-5">
+            <li class="nav-item me-lg-4">
               <a class="nav-link" href="selection.html">Sélection</a>
             </li>
+            <li class="nav-item me-lg-4">
+              <a class="nav-link" href="formulaire.html">Contact</a>
+            </li>
           </ul>
-
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
+ 
+          <!-- Recherche : interroge Google sur ce seul site (l'ancien formulaire ne faisait rien) -->
+          <form class="d-flex" role="search" action="https://www.google.com/search" method="get" target="_blank">
+            <input type="hidden" name="as_sitesearch" value="goligbaka.fr">
+            <input class="form-control me-2" type="search" name="q" placeholder="Rechercher" aria-label="Rechercher sur le site" required>
             <button class="btn btn-outline-success" type="submit">Rechercher</button>
           </form>
         </div>
       </div>
     </nav>
   </header>
-
+ 
   <main class="container py-5">
-    <h1 class="text-center text-light mb-4 titre-page">Produits</h1>
-
-    <nav aria-label="Fil d’Ariane" class="mb-4">
+    <nav aria-label="Fil d'Ariane" class="mb-4">
       <ol class="breadcrumb breadcrumb-custom">
         <li class="breadcrumb-item"><a href="https://goligbaka.fr/">Accueil</a></li>
         <li class="breadcrumb-item active" aria-current="page">Produits</li>
       </ol>
     </nav>
-
-    <section class="row g-4 justify-content-center">
+ 
+    <h1 class="text-center text-light mb-3 titre-page">Produits</h1>
+    <p class="lead text-center text-light mb-5">
+      Dessins originaux de GOLI Gore Gbaka, inspirés des grands maîtres : scènes bibliques, mythologie et portraits.
+    </p>
+ 
+    <!--
+      Chaque carte : le titre de l'œuvre en <h2> (et non plus « Prix : 10000 € »), puis le prix.
+      Noms de fichiers encodés (espaces, accents) pour des URL valides.
+      Les 4 premières images se chargent tout de suite, les suivantes à la demande (loading="lazy").
+    -->
+    <section class="row g-4 justify-content-center" aria-label="Œuvres disponibles">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="David et Goliath.jpg" class="card-img-top" alt="Œuvre David et Goliath">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="David%20et%20Goliath.jpg" class="card-img-top produit-img" alt="David et Goliath, dessin de GOLI Gore Gbaka">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">David et Goliath</p>
-            <a href="David et Goliath.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">David et Goliath</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="David%20et%20Goliath.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : David et Goliath">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-
+ 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Jupiter et Thétis.jpg" class="card-img-top" alt="Œuvre Jupiter et Thétis">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Jupiter%20et%20Th%C3%A9tis.jpg" class="card-img-top produit-img" alt="Jupiter et Thétis, dessin de GOLI Gore Gbaka">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Jupiter et Thétis</p>
-            <a href="Jupiter et Thétis.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">Jupiter et Thétis</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Jupiter%20et%20Th%C3%A9tis.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Jupiter et Thétis">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-
+ 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Force.jpg" class="card-img-top" alt="Œuvre La Force">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Force.jpg" class="card-img-top produit-img" alt="La Force, dessin de GOLI Gore Gbaka">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Force</p>
-            <a href="La Force.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Force</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Force.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Force">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-
+ 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Les Trois Grâces.jpg" class="card-img-top" alt="Œuvre Les Trois Grâces">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Les%20Trois%20Gr%C3%A2ces.jpg" class="card-img-top produit-img" alt="Les Trois Grâces, dessin de GOLI Gore Gbaka">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Les Trois Grâces</p>
-            <a href="Les Trois Grâces.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">Les Trois Grâces</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Les%20Trois%20Gr%C3%A2ces.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Les Trois Grâces">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="David.jpg" class="card-img-top" alt="Œuvre David">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">David</p>
-            <a href="David.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Ecce Homo .jpg" class="card-img-top" alt="Œuvre Ecce Homo">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Ecce Homo</p>
-            <a href="Ecce Homo.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La conversion de Saint Paul.jpg" class="card-img-top" alt="Œuvre La conversion de Saint Paul">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La conversion de Saint Paul</p>
-            <a href="La conversion de Saint Paul.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="L'Adoration des bergers.jpg" class="card-img-top" alt="Œuvre L'Adoration des bergers">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'Adoration des bergers</p>
-            <a href="L'Adoration des bergers.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Liberté guidant le peuple.jpg" class="card-img-top" alt="Œuvre La Liberté guidant le peuple">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Liberté guidant le peuple</p>
-            <a href="La Liberté guidant le peuple.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Madone des palefreniers.jpg" class="card-img-top" alt="Œuvre La Madone des palefreniers">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Madone des palefreniers</p>
-            <a href="La Madone des palefreniers.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Madone des pélérins.jpg" class="card-img-top" alt="Œuvre La Madone des pélérins">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Madone des pélérins</p>
-            <a href="La Madone des pélérins.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Mise au tombeau.jpg" class="card-img-top" alt="Œuvre La Mise au tombeau">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Mise au tombeau</p>
-            <a href="La Mise au tombeau.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Naissance de Vénus.jpg" class="card-img-top" alt="Œuvre La Naissance de Vénus">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Naissance de Vénus</p>
-            <a href="La Naissance de Vénus.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Pietà.jpg" class="card-img-top" alt="Œuvre La Pietà">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Pietà</p>
-            <a href="La Pietà.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Ronde de nuit.jpg" class="card-img-top" alt="Œuvre La Ronde de nuit">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Ronde de nuit</p>
-            <a href="La Ronde de nuit.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La tentation du Christ.jpg" class="card-img-top" alt="Œuvre La tentation du Christ">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La tentation du Christ</p>
-            <a href="La tentation du Christ.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Transfiguration.jpg" class="card-img-top" alt="Œuvre La Transfiguration">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Transfiguration</p>
-            <a href="La Transfiguration.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La visitation.jpg" class="card-img-top" alt="Œuvre La visitation">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La visitation</p>
-            <a href="La visitation.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le Christ et la Samaritaine.jpg" class="card-img-top" alt="Œuvre Le Christ et la Samaritaine">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le Christ et la Samaritaine</p>
-            <a href="Le Christ et la Samaritaine.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le marché aux esclaves.jpg" class="card-img-top" alt="Œuvre Le marché aux esclaves">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le marché aux esclaves</p>
-            <a href="Le marché aux esclaves.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le petit Bacchus malade.jpg" class="card-img-top" alt="Œuvre Le petit Bacchus Malade">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le petit Bacchus malade</p>
-            <a href="Le petit Bacchus malade.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le reniement de Pierre.jpg" class="card-img-top" alt="Œuvre Le reniement de Pierre">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le reniement de Pierre</p>
-            <a href="Le reniement de Pierre.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le Sacrifice d'Isaac.jpg" class="card-img-top" alt="Œuvre Le Sacrifice d'Isaac">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le Sacrifice d'Isaac</p>
-            <a href="Le Sacrifice d'Isaac.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le souper à Emmaus.jpg" class="card-img-top" alt="Œuvre Le souper à Emmaus">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le souper à Emmaus</p>
-            <a href="Le souper à Emmaus.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Les Baigneuses.jpg" class="card-img-top" alt="Œuvre Les Baigneuses">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Les Baigneuses</p>
-            <a href="Les Baigneuses.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Les Sept oeuvres de miséricorde.jpg" class="card-img-top" alt="Œuvre Les Sept oeuvres de miséricorde">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Les Sept oeuvres de miséricorde</p>
-            <a href="Les Sept oeuvres de miséricorde.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Les Trois Marie face au sépulcre vide.jpg" class="card-img-top" alt="Œuvre Les Trois Marie face au sépulcre vide">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Les Trois Marie face au sépulcre vide</p>
-            <a href="Les Trois Marie face au sépulcre vide.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="OEdipe explique l'énigme du sphinx.jpg" class="card-img-top" alt="Œuvre OEdipe expliquant l'énigme du sphinx">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">OEdipe explique l'énigme du sphinx</p>
-            <a href="OEdipe explique l'énigme du sphinx.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Romulus et Remus recueillis par Faustulus.jpg" class="card-img-top" alt="Œuvre Romulus et Remus recueillis par Faustulus">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Romulus et Remus recueillis par Faustulus</p>
-            <a href="Romulus et Remus recueillis par Faustulus.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Saint Jean-Baptiste à la fontaine.jpg" class="card-img-top" alt="Œuvre Saint Jean Baptiste à la fontaine">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Saint Jean Baptiste à la fontaine</p>
-            <a href="Saint Jean-Baptiste à la fontaine.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Sainte Anne, la vierge et l'Enfant Jésus jouant avec un agneau.jpg" class="card-img-top" alt="Œuvre Saint Anne, la vierge et l'Enfant Jésus jouant avec un agneau">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Sainte Anne, la vierge et l'Enfant Jésus jouant avec un agneau</p>
-            <a href="Sainte Anne, la vierge et l'Enfant Jésus jouant avec un agneau.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="The woman taken in adultery.jpg" class="card-img-top" alt="Œuvre The woman taken in adultery">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">The woman taken in adultery</p>
-            <a href="The woman taken in adultery.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Bethsabée au bain tenant la lettre du roi David.jpg" class="card-img-top" alt="Œuvre Bethsabée au bain tenant la lettre du roi David">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Bethsabée au bain tenant la lettre du roi David</p>
-            <a href="Bethsabée au bain tenant la lettre du roi  David.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Fiancée juive.jpg" class="card-img-top" alt="Œuvre La Fiancée juive">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Fiancée juive</p>
-            <a href="La Fiancée juive.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="L'incrédubilité de Thomas.jpg" class="card-img-top" alt="Œuvre L'incrédubilité de Thomas">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'incrédubilité de Thomas</p>
-            <a href="L'incrédubilité de Thomas.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="L'Odalisque blonde.jpg" class="card-img-top" alt="Œuvre L'Odalisque blonde">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'Odalisque blonde</p>
-            <a href="L'Odalisque blonde.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Le Radeau de la Meduse.jpg" class="card-img-top" alt="Œuvre Le Radeau de la Meduse">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le Radeau de la Meduse</p>
-            <a href="Le Radeau de la Meduse.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="l-origine-du-monde.jpg" class="card-img-top" alt="Œuvre L'origine du monde">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'origine du monde</p>
-            <a href="l-origine-du-monde.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La Mort de la Vierge.jpg" class="card-img-top" alt="Œuvre La Mort de la Vierge">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La Mort de la Vierge</p>
-            <a href="la-mort-de-la-vierge.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                                   <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="L'Arrestation du Christ.jpg" class="card-img-top" alt="Œuvre L'Arrestation du Christ">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'Arrestation du Christ</p>
-            <a href="l-arrestation-du-christ.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Saint Jérôme écrivant.jpg" class="card-img-top" alt="Œuvre Saint Jérôme écrivant">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Saint Jérôme écrivant</p>
-            <a href="Saint Jérôme écrivant.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                                               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Jésus-Christ guérissant l'aveugle.jpg" class="card-img-top" alt="Œuvre Jésus-Christ guérissant l'aveugle">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Jésus-Christ guérissant l'aveugle</p>
-            <a href="jésus-christ-guérissant-aveugle.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                                                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Les deux demoniaques.jpg" class="card-img-top" alt="Œuvre Les deux demoniaques">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Les deux demoniaques</p>
-            <a href="Les deux demoniaques.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
-                                                                           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="La parabole du trésor caché.jpg" class="card-img-top" alt="Œuvre La parabole du trésor caché">
-          <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">La parabole du trésor caché</p>
-            <a href="la-parabole-du-tresor-cache.html" class="btn btn-success mt-auto">Voir</a>
-          </div>
-        </div>
-      </div>
+ 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Miracle of the Bread and Fish.jpg" class="card-img-top" alt="Œuvre Miracle of the Bread and Fish">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="David.jpg" class="card-img-top produit-img" alt="David, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Miracle of the Bread and Fish</p>
-            <a href="miracle-of-the-bread-and-fish.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">David</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="David.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : David">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm produit-card">
-          <img src="Saint Pierre marchant sur les eaux.jpg" class="card-img-top" alt="Œuvre Saint Pierre marchant sur les eaux">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <!-- Nom de fichier conservé tel quel (espace avant .jpg) : à renommer sur le serveur si possible -->
+          <img src="Ecce%20Homo%20.jpg" class="card-img-top produit-img" alt="Ecce Homo, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Saint Pierre marchant sur les eaux</p>
-            <a href="saint-pierre-marchant-sur-les-eaux.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">Ecce Homo</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Ecce%20Homo.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Ecce Homo">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="Eglise Notre Dame de France Juvisy sur orge.jpg" class="card-img-top" alt="Œuvre Eglise Notre Dame de France Juvisy sur orge">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20conversion%20de%20Saint%20Paul.jpg" class="card-img-top produit-img" alt="La Conversion de saint Paul, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Eglise Notre Dame de France Juvisy sur orge</p>
-            <a href="Eglise Notre Dame de France Juvisy sur orge.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Conversion de saint Paul</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20conversion%20de%20Saint%20Paul.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Conversion de saint Paul">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="L'heureuse mère.jpg" class="card-img-top" alt="Œuvre L'heureuse mère">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="L'Adoration%20des%20bergers.jpg" class="card-img-top produit-img" alt="L'Adoration des bergers, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'heureuse mère</p>
-            <a href="l-heureuse-mere.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">L'Adoration des bergers</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="L'Adoration%20des%20bergers.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Adoration des bergers">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="Jésus et la Cananéenne.jpg" class="card-img-top" alt="Œuvre Jésus et la Cananéenne">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Libert%C3%A9%20guidant%20le%20peuple.jpg" class="card-img-top produit-img" alt="La Liberté guidant le peuple, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Jésus et la Cananéenne</p>
-            <a href="jesus-et-la-cananeenne.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Liberté guidant le peuple</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Libert%C3%A9%20guidant%20le%20peuple.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Liberté guidant le peuple">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-                           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="Le Christ remettant les clés à saint Pierre.jpg" class="card-img-top" alt="Œuvre Le Christ remettant les clés à saint Pierre">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Madone%20des%20palefreniers.jpg" class="card-img-top produit-img" alt="La Madone des palefreniers, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le Christ remettant les clés à saint Pierre</p>
-            <a href="le-christ-remettant-les-cles-a-saint-pierre.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Madone des palefreniers</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Madone%20des%20palefreniers.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Madone des palefreniers">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-                                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="L'enlèvement des filles de Leucippe.jpg" class="card-img-top" alt="Œuvre L'enlèvement des filles de Leucippe">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Madone%20des%20p%C3%A9l%C3%A9rins.jpg" class="card-img-top produit-img" alt="La Madone des pèlerins, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">L'enlèvement des filles de Leucippe</p>
-            <a href="l-enlevement-des-filles-de-leucippe.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Madone des pèlerins</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Madone%20des%20p%C3%A9l%C3%A9rins.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Madone des pèlerins">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="Danaé et la pluie d'or.jpg" class="card-img-top" alt="Œuvre Danaé et la pluie d'or">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Mise%20au%20tombeau.jpg" class="card-img-top produit-img" alt="La Mise au tombeau, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Danaé et la pluie d'or</p>
-            <a href="danae-et-la-pluie-d-or.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Mise au tombeau</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Mise%20au%20tombeau.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Mise au tombeau">Voir</a>
           </div>
-        </div>
+        </article>
       </div>
-       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card h-100 shadow-sm produit-card">
-          <img src="Le Festin de Balthazar.jpg" class="card-img-top" alt="Œuvre Le Festin de Balthazar">
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Naissance%20de%20V%C3%A9nus.jpg" class="card-img-top produit-img" alt="La Naissance de Vénus, dessin de GOLI Gore Gbaka" loading="lazy">
           <div class="card-body d-flex flex-column">
-            <h2 class="h5 card-title">Prix : 10000 €</h2>
-            <p class="card-text">Le Festin de Balthazar</p>
-            <a href="le-festin-de-balthazar.html" class="btn btn-success mt-auto">Voir</a>
+            <h2 class="h5 card-title">La Naissance de Vénus</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Naissance%20de%20V%C3%A9nus.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Naissance de Vénus">Voir</a>
           </div>
-        </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Piet%C3%A0.jpg" class="card-img-top produit-img" alt="La Pietà, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Pietà</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Piet%C3%A0.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Pietà">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Ronde%20de%20nuit.jpg" class="card-img-top produit-img" alt="La Ronde de nuit, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Ronde de nuit</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Ronde%20de%20nuit.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Ronde de nuit">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20tentation%20du%20Christ.jpg" class="card-img-top produit-img" alt="La Tentation du Christ, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Tentation du Christ</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20tentation%20du%20Christ.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Tentation du Christ">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Transfiguration.jpg" class="card-img-top produit-img" alt="La Transfiguration, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Transfiguration</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Transfiguration.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Transfiguration">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20visitation.jpg" class="card-img-top produit-img" alt="La Visitation, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Visitation</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20visitation.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Visitation">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20Christ%20et%20la%20Samaritaine.jpg" class="card-img-top produit-img" alt="Le Christ et la Samaritaine, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Christ et la Samaritaine</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20Christ%20et%20la%20Samaritaine.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Christ et la Samaritaine">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20march%C3%A9%20aux%20esclaves.jpg" class="card-img-top produit-img" alt="Le Marché aux esclaves, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Marché aux esclaves</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20march%C3%A9%20aux%20esclaves.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Marché aux esclaves">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20petit%20Bacchus%20malade.jpg" class="card-img-top produit-img" alt="Le Petit Bacchus malade, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Petit Bacchus malade</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20petit%20Bacchus%20malade.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Petit Bacchus malade">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20reniement%20de%20Pierre.jpg" class="card-img-top produit-img" alt="Le Reniement de Pierre, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Reniement de Pierre</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20reniement%20de%20Pierre.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Reniement de Pierre">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20Sacrifice%20d'Isaac.jpg" class="card-img-top produit-img" alt="Le Sacrifice d'Isaac, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Sacrifice d'Isaac</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20Sacrifice%20d'Isaac.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Sacrifice d'Isaac">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20souper%20%C3%A0%20Emmaus.jpg" class="card-img-top produit-img" alt="Le Souper à Emmaüs, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Souper à Emmaüs</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20souper%20%C3%A0%20Emmaus.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Souper à Emmaüs">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Les%20Baigneuses.jpg" class="card-img-top produit-img" alt="Les Baigneuses, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Les Baigneuses</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Les%20Baigneuses.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Les Baigneuses">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Les%20Sept%20oeuvres%20de%20mis%C3%A9ricorde.jpg" class="card-img-top produit-img" alt="Les Sept Œuvres de miséricorde, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Les Sept Œuvres de miséricorde</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Les%20Sept%20oeuvres%20de%20mis%C3%A9ricorde.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Les Sept Œuvres de miséricorde">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Les%20Trois%20Marie%20face%20au%20s%C3%A9pulcre%20vide.jpg" class="card-img-top produit-img" alt="Les Trois Marie face au sépulcre vide, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Les Trois Marie face au sépulcre vide</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Les%20Trois%20Marie%20face%20au%20s%C3%A9pulcre%20vide.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Les Trois Marie face au sépulcre vide">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="OEdipe%20explique%20l'%C3%A9nigme%20du%20sphinx.jpg" class="card-img-top produit-img" alt="Œdipe explique l'énigme du Sphinx, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Œdipe explique l'énigme du Sphinx</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="OEdipe%20explique%20l'%C3%A9nigme%20du%20sphinx.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Œdipe explique l'énigme du Sphinx">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Romulus%20et%20Remus%20recueillis%20par%20Faustulus.jpg" class="card-img-top produit-img" alt="Romulus et Remus recueillis par Faustulus, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Romulus et Remus recueillis par Faustulus</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Romulus%20et%20Remus%20recueillis%20par%20Faustulus.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Romulus et Remus recueillis par Faustulus">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Saint%20Jean-Baptiste%20%C3%A0%20la%20fontaine.jpg" class="card-img-top produit-img" alt="Saint Jean-Baptiste à la fontaine, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Saint Jean-Baptiste à la fontaine</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Saint%20Jean-Baptiste%20%C3%A0%20la%20fontaine.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Saint Jean-Baptiste à la fontaine">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Sainte%20Anne,%20la%20vierge%20et%20l'Enfant%20J%C3%A9sus%20jouant%20avec%20un%20agneau.jpg" class="card-img-top produit-img" alt="Sainte Anne, la Vierge et l'Enfant Jésus jouant avec un agneau, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Sainte Anne, la Vierge et l'Enfant Jésus jouant avec un agneau</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Sainte%20Anne,%20la%20vierge%20et%20l'Enfant%20J%C3%A9sus%20jouant%20avec%20un%20agneau.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Sainte Anne, la Vierge et l'Enfant Jésus jouant avec un agneau">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="The%20woman%20taken%20in%20adultery.jpg" class="card-img-top produit-img" alt="The Woman Taken in Adultery, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">The Woman Taken in Adultery</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="The%20woman%20taken%20in%20adultery.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : The Woman Taken in Adultery">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <!-- À VÉRIFIER : le lien contient deux espaces (« roi  David ») : il ne marche que si la page porte exactement ce nom -->
+          <img src="Bethsab%C3%A9e%20au%20bain%20tenant%20la%20lettre%20du%20roi%20David.jpg" class="card-img-top produit-img" alt="Bethsabée au bain tenant la lettre du roi David, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Bethsabée au bain tenant la lettre du roi David</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Bethsab%C3%A9e%20au%20bain%20tenant%20la%20lettre%20du%20roi%20%20David.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Bethsabée au bain tenant la lettre du roi David">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Fianc%C3%A9e%20juive.jpg" class="card-img-top produit-img" alt="La Fiancée juive, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Fiancée juive</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="La%20Fianc%C3%A9e%20juive.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Fiancée juive">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="L'incr%C3%A9dubilit%C3%A9%20de%20Thomas.jpg" class="card-img-top produit-img" alt="L'Incrédulité de Thomas, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">L'Incrédulité de Thomas</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="L'incr%C3%A9dubilit%C3%A9%20de%20Thomas.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Incrédulité de Thomas">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="L'Odalisque%20blonde.jpg" class="card-img-top produit-img" alt="L'Odalisque blonde, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">L'Odalisque blonde</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="L'Odalisque%20blonde.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Odalisque blonde">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20Radeau%20de%20la%20Meduse.jpg" class="card-img-top produit-img" alt="Le Radeau de la Méduse, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Radeau de la Méduse</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Le%20Radeau%20de%20la%20Meduse.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Radeau de la Méduse">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="l-origine-du-monde.jpg" class="card-img-top produit-img" alt="L'Origine du monde, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">L'Origine du monde</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="l-origine-du-monde.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Origine du monde">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20Mort%20de%20la%20Vierge.jpg" class="card-img-top produit-img" alt="La Mort de la Vierge, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Mort de la Vierge</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="la-mort-de-la-vierge.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Mort de la Vierge">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="L'Arrestation%20du%20Christ.jpg" class="card-img-top produit-img" alt="L'Arrestation du Christ, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">L'Arrestation du Christ</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="l-arrestation-du-christ.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Arrestation du Christ">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Saint%20J%C3%A9r%C3%B4me%20%C3%A9crivant.jpg" class="card-img-top produit-img" alt="Saint Jérôme écrivant, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Saint Jérôme écrivant</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Saint%20J%C3%A9r%C3%B4me%20%C3%A9crivant.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Saint Jérôme écrivant">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="J%C3%A9sus-Christ%20gu%C3%A9rissant%20l'aveugle.jpg" class="card-img-top produit-img" alt="Jésus-Christ guérissant l'aveugle, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Jésus-Christ guérissant l'aveugle</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="j%C3%A9sus-christ-gu%C3%A9rissant-aveugle.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Jésus-Christ guérissant l'aveugle">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Les%20deux%20demoniaques.jpg" class="card-img-top produit-img" alt="Les Deux Démoniaques, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Les Deux Démoniaques</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Les%20deux%20demoniaques.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Les Deux Démoniaques">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="La%20parabole%20du%20tr%C3%A9sor%20cach%C3%A9.jpg" class="card-img-top produit-img" alt="La Parabole du trésor caché, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">La Parabole du trésor caché</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="la-parabole-du-tresor-cache.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : La Parabole du trésor caché">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Miracle%20of%20the%20Bread%20and%20Fish.jpg" class="card-img-top produit-img" alt="Miracle of the Bread and Fish, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Miracle of the Bread and Fish</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="miracle-of-the-bread-and-fish.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Miracle of the Bread and Fish">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Saint%20Pierre%20marchant%20sur%20les%20eaux.jpg" class="card-img-top produit-img" alt="Saint Pierre marchant sur les eaux, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Saint Pierre marchant sur les eaux</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="saint-pierre-marchant-sur-les-eaux.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Saint Pierre marchant sur les eaux">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Eglise%20Notre%20Dame%20de%20France%20Juvisy%20sur%20orge.jpg" class="card-img-top produit-img" alt="Église Notre-Dame-de-France, Juvisy-sur-Orge, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Église Notre-Dame-de-France, Juvisy-sur-Orge</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="Eglise%20Notre%20Dame%20de%20France%20Juvisy%20sur%20orge.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Église Notre-Dame-de-France, Juvisy-sur-Orge">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="L'heureuse%20m%C3%A8re.jpg" class="card-img-top produit-img" alt="L'Heureuse Mère, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">L'Heureuse Mère</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="l-heureuse-mere.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Heureuse Mère">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="J%C3%A9sus%20et%20la%20Canan%C3%A9enne.jpg" class="card-img-top produit-img" alt="Jésus et la Cananéenne, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Jésus et la Cananéenne</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="jesus-et-la-cananeenne.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Jésus et la Cananéenne">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20Christ%20remettant%20les%20cl%C3%A9s%20%C3%A0%20saint%20Pierre.jpg" class="card-img-top produit-img" alt="Le Christ remettant les clés à saint Pierre, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Christ remettant les clés à saint Pierre</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="le-christ-remettant-les-cles-a-saint-pierre.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Christ remettant les clés à saint Pierre">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="L'enl%C3%A8vement%20des%20filles%20de%20Leucippe.jpg" class="card-img-top produit-img" alt="L'Enlèvement des filles de Leucippe, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">L'Enlèvement des filles de Leucippe</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="l-enlevement-des-filles-de-leucippe.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : L'Enlèvement des filles de Leucippe">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Dana%C3%A9%20et%20la%20pluie%20d'or.jpg" class="card-img-top produit-img" alt="Danaé et la pluie d'or, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Danaé et la pluie d'or</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="danae-et-la-pluie-d-or.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Danaé et la pluie d'or">Voir</a>
+          </div>
+        </article>
+      </div>
+ 
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <article class="card h-100 shadow-sm produit-card">
+          <img src="Le%20Festin%20de%20Balthazar.jpg" class="card-img-top produit-img" alt="Le Festin de Balthazar, dessin de GOLI Gore Gbaka" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Le Festin de Balthazar</h2>
+            <p class="card-text fw-bold mb-3">10 000 €</p>
+            <a href="le-festin-de-balthazar.html" class="btn btn-success mt-auto" aria-label="Voir l'œuvre : Le Festin de Balthazar">Voir</a>
+          </div>
+        </article>
       </div>
     </section>
+ 
+    <div class="d-flex flex-wrap justify-content-center gap-3 my-5">
+      <a class="btn btn-success" href="https://www.dessinsgore.fr/" target="_blank" rel="noopener">
+        Acheter une œuvre
+      </a>
+      <a class="btn btn-success" href="formulaire.html">
+        Me contacter
+      </a>
+    </div>
   </main>
-
+ 
   <footer class="bg-dark text-light p-3 mt-4">
     <div class="d-flex flex-column flex-md-row fs-5 justify-content-between align-items-center gap-3">
-      <p class="mb-0 text-center">GOLI Gore Gbaka - © Copyright 2026</p>
-
+      <p class="mb-0 text-center">© 2026 GOLI Gore Gbaka</p>
+ 
       <div class="d-flex align-items-center gap-3">
-        
-
         <a
           href="https://x.com/GoliGore33933"
           target="_blank"
@@ -677,11 +778,11 @@
           title="X"
           class="text-light"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
           </svg>
         </a>
-
+ 
         <a
           href="https://fr.pinterest.com/goregoli/"
           target="_blank"
@@ -690,16 +791,39 @@
           title="Pinterest"
           class="text-light"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
           </svg>
         </a>
       </div>
     </div>
-
+ 
+    <!-- À VÉRIFIER : « X.XX » s'affiche tel quel pour le visiteur. Si script.js ne le remplit pas, supprimer ce paragraphe. -->
     <p class="jeu d-flex fs-5 justify-content-center mt-3 mb-0">X.XX</p>
+ 
+    <p class="text-center mt-3 mb-0">
+      <a href="#" class="text-light" data-cookie-manage>Gérer mes cookies</a> ·
+      <a href="mentions-legales.html" class="text-light">Mentions légales</a>
+    </p>
   </footer>
-
+ 
+  <!-- Google Tag Manager : chargé UNIQUEMENT après consentement « Mesure d'audience » -->
+  <script type="text/plain" data-cookie-category="audience">
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5L47N78Z');
+  </script>
+ 
+  <!-- Bandeau de consentement (le même sur toutes les pages) -->
+  <script src="cookie-consent.js" defer></script>
+ 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -708,3 +832,4 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+ 

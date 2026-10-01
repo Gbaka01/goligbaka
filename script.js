@@ -32,3 +32,26 @@ window.addEventListener("scroll", () => {
     scrollTopBtn.classList.remove("show");
   }
 });
+document.addEventListener("click", function (e) {
+  const lien = e.target.closest("[data-cookie-manage]");
+  if (!lien) return;
+  e.preventDefault();
+
+  // 1) Si le script expose une fonction pour rouvrir le bandeau, on l'utilise
+  if (window.CookieConsent && typeof window.CookieConsent.show === "function") {
+    window.CookieConsent.show();
+    return;
+  }
+
+  // 2) Sinon : on efface le consentement enregistré et on recharge
+  Object.keys(localStorage).forEach(function (cle) {
+    if (/cookie|consent/i.test(cle)) localStorage.removeItem(cle);
+  });
+  document.cookie.split(";").forEach(function (c) {
+    const nom = c.split("=")[0].trim();
+    if (/cookie|consent/i.test(nom)) {
+      document.cookie = nom + "=; Max-Age=0; path=/";
+    }
+  });
+  location.reload();
+});
