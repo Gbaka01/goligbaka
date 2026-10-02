@@ -32,22 +32,49 @@
  
   <!-- Données structurées -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "GOLI Gore Gbaka",
-    "alternateName": "Goré",
-    "jobTitle": "Artiste contemporain",
-    "url": "https://goligbaka.fr/",
-    "image": "https://goligbaka.fr/L%27Arrestation%20du%20Christ.jpg",
-    "sameAs": [
-      "https://dessinsgore.fr/",
-      "https://reseaugbaka.fr/",
-      "https://x.com/GoliGore33933",
-      "https://fr.pinterest.com/goregoli/"
-    ]
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://goligbaka.fr/#website",
+      "url": "https://goligbaka.fr/",
+      "name": "Dessins de Goré",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://goligbaka.fr/#artiste" },
+      "about": { "@id": "https://goligbaka.fr/#artiste" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://goligbaka.fr/#webpage",
+      "url": "https://goligbaka.fr/",
+      "name": "Dessins de Goré | GOLI Gore Gbaka, artiste contemporain",
+      "description": "Découvrez l'univers artistique de GOLI Gore Gbaka : dessins, galerie, produits et art contemporain.",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://goligbaka.fr/#website" },
+      "about": { "@id": "https://goligbaka.fr/#artiste" },
+      "primaryImageOfPage": "https://goligbaka.fr/Moi%20et%20Marie-Anna.JPG"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://goligbaka.fr/#artiste",
+      "name": "GOLI Gore Gbaka",
+      "alternateName": "Goré",
+      "jobTitle": "Artiste contemporain",
+      "description": "Artiste contemporain dont le dessin explore le symbolisme et la spiritualité, entre références religieuses et portraits intimes.",
+      "url": "https://goligbaka.fr/",
+      "image": "https://goligbaka.fr/Moi%20et%20Marie-Anna.JPG",
+      "knowsAbout": ["Dessin", "Art contemporain", "Art sacré", "Portrait"],
+      "sameAs": [
+        "https://www.dessinsgore.fr/",
+        "https://reseaugbaka.fr/",
+        "https://x.com/GoliGore33933",
+        "https://fr.pinterest.com/goregoli/"
+      ]
+    }
+  ]
+}
+</script>
  
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link
