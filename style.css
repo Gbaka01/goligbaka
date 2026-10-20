@@ -178,3 +178,14 @@ footer a:focus {
     height: 220px;
   }
 }
+.zoomable { width: 200px; cursor: zoom-in; transition: transform .2s; }
+  .zoomable:hover { transform: scale(1.05); }
+
+  #overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.85);
+    justify-content: center; align-items: center;
+    cursor: zoom-out; z-index: 1000;
+  }
+  #overlay.open { display: flex; }
+  #overlay img { max-width: 90vw; max-height: 90vh; border-radius: 6px; }

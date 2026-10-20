@@ -55,3 +55,19 @@ document.addEventListener("click", function (e) {
   });
   location.reload();
 });
+
+  const overlay = document.getElementById('overlay');
+  const overlayImg = document.getElementById('overlay-img');
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      overlayImg.src = img.dataset.full || img.src; // image HD si fournie
+      overlayImg.alt = img.alt;
+      overlay.classList.add('open');
+    });
+  });
+
+  overlay.addEventListener('click', () => overlay.classList.remove('open'));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') overlay.classList.remove('open');
+  });
