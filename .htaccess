@@ -1,0 +1,95 @@
+# =============================================================
+#  .htaccess — goligbaka.fr  (site statique HTML/CSS/JS)
+#  À renommer en ".htaccess" et à placer à la racine du site (ex. /www)
+# =============================================================
+
+Options -Indexes -MultiViews
+ServerSignature Off
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+
+# -------------------------------------------------------------
+# 1. Redirections : HTTPS + domaine sans www
+#    (cohérent avec le sitemap, robots.txt et les liens du site)
+# -------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Forcer HTTPS (compatible proxy OVH)
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://goligbaka.fr%{REQUEST_URI} [L,R=301]
+
+    # www -> sans www
+    RewriteCond %{HTTP_HOST} ^www\.goligbaka\.fr$ [NC]
+    RewriteRule ^ https://goligbaka.fr%{REQUEST_URI} [L,R=301]
+
+    # /index.html -> / (évite le contenu dupliqué)
+    RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+    RewriteRule ^index\.html$ / [L,R=301]
+
+    # Bloquer les fichiers cachés (.git, .env…) sauf .well-known (SSL)
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+    RewriteRule \.(log|sql|bak|old|ini|sh|md)$ - [F,L,NC]
+
+    # --- Option : URLs sans ".html" (ex. /galerie au lieu de /galerie.html) ---
+    # Ne l'activez que si vous mettez aussi à jour les liens et le sitemap.
+    # RewriteCond %{THE_REQUEST} \s/([^.?\s]+)\.html[\s?] [NC]
+    # RewriteRule ^ /%1 [L,R=301]
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME}.html -f
+    # RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# -------------------------------------------------------------
+# 2. En-têtes de sécurité
+#    (pas de CSP stricte pour ne pas casser Formspree / cookie-consent.js)
+# -------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header unset X-Powered-By
+
+    # Pas de cache long pour les pages HTML (mises à jour visibles tout de suite)
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
+
+# -------------------------------------------------------------
+# 3. Compression
+# -------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+</IfModule>
+
+# -------------------------------------------------------------
+# 4. Cache navigateur (les œuvres en .jpg sont lourdes : gros gain)
+# -------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                          "access plus 1 week"
+    ExpiresByType text/html                 "access plus 0 seconds"
+    ExpiresByType text/css                  "access plus 1 month"
+    ExpiresByType application/javascript    "access plus 1 month"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType application/pdf           "access plus 1 month"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType application/xml           "access plus 1 day"
+    ExpiresByType text/xml                  "access plus 1 day"
+</IfModule>
+
+# -------------------------------------------------------------
+# 5. Page 404 (créer un fichier 404.html puis décommenter)
+# -------------------------------------------------------------
+# ErrorDocument 404 /404.html
